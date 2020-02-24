@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "angular-stream"
+  "defaultProject": "angular-stream",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
