@@ -11,6 +11,10 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { environment } from 'src/environments/environment';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -19,7 +23,15 @@ import { environment } from 'src/environments/environment';
     BrowserModule,
     BrowserAnimationsModule,
 
+    // Angular material
+    MatCardModule,
+    MatGridListModule,
+    MatButtonModule,
+
+    // Custom
     CounterModule,
+
+    // NgRx
     StoreModule.forRoot({}, {
       runtimeChecks: {
         strictStateImmutability: true,

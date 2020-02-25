@@ -2,9 +2,9 @@ import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { IApplicationState } from 'src/app/modules/common/ng-rx/state/application.state';
 
 export interface ICounterState {
-  firstItem: number,
-  secondItem: number
-};
+  firstItem: number;
+  secondItem: number;
+}
 
 export const counterFeatureKey = "counterState";
 export const selectCounter = createFeatureSelector<IApplicationState, ICounterState>(counterFeatureKey);

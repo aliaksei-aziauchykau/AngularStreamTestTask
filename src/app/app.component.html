@@ -1,2 +1,9 @@
-<app-outer-counter>
-</app-outer-counter>
+
+<mat-card>
+  <button mat-raised-button color="primary" (click)="start()" mat-button>Start</button>
+  <button mat-raised-button color="accent" (click)="stop()" mat-button>Stop</button>
+  <app-outer-counter [value]="value1$">
+  </app-outer-counter>
+  <app-outer-counter [value]="value2$">
+  </app-outer-counter>
+</mat-card>
