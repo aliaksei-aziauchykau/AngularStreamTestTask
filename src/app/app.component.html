@@ -1,73 +1,79 @@
-
-
 <div class="container">
   <div class="row mt-5">
-      <div class="col-12 col-lg-4 mb-3">
-        <mat-card>
-          <mat-card-content>
-          <div class="row">
-            <div class="col mb-3">
-              <app-outer-counter [value]="firstItem$ | async" [title]="'First Item to increas'">
-              </app-outer-counter>
-            </div>
-            <div class="col mb-3">
-              <app-outer-counter [value]="secondItem$ | async" [title]="'Second Item to decrease'">
-              </app-outer-counter>
-            </div>
+    <div class="col-12 col-lg-4 mb-3">
+      <div class="row">
+        <div class="col mb-3">
+          <app-outer-counter [value]="firstItem$ | async" [title]="'First Item to increas'">
+          </app-outer-counter>
+        </div>
+        <div class="col mb-3">
+          <app-outer-counter [value]="secondItem$ | async" [title]="'Second Item to decrease'">
+          </app-outer-counter>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-card>
+            <mat-card-actions>
+              <div class="row justify-content-center text-center">
+                <div class="col mb-3">
+                  <button mat-raised-button color="primary" (click)="start()" mat-button>Start</button>
+                </div>
+                <div class="col mb-3">
+                  <button mat-raised-button color="accent" (click)="stop()" mat-button>Stop</button>
+                </div>
+                <div class="col mb-3">
+                  <button mat-raised-button (click)="reset()" mat-button>Reset</button>
+                </div>
+              </div>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-8 mb-3">
+      <mat-card class="mb-3">
+        <mat-card-title>Requirements</mat-card-title>
+        <mat-card-content>
+          <p>Create a store with 2 variables in its state with naming up to your decision.</p>
+          <p>Initial state of them is -5 and 10 respectively.</p>
+          <div>
+            <p>The store should have 3 actions: "change", "increase" and "decrease":</p>
+            <ul>
+              <li>"change" action does nothing in a reducer.</li>
+              <li>"increase" action should increase the first variable by 1.</li>
+              <li>"decrease" action should decrease the second variable by 1.</li>
+            </ul>
           </div>
-          </mat-card-content>
+          <div>
+            <p>Create 2 components:</p>
+            <ul>
+              <li>The first component is responsible for displaying what it gets in an input property. It should display
+                the input’s value always in a border. If its value is lower than 0 its border and value should be red,
+                if greater then blue.</li>
+              <li>The second component renders the variables from store via the first component.</li>
+            </ul>
+          </div>
 
-            <div class="row justify-content-center text-center">
-              <div class="col mb-3">
-                <button mat-raised-button color="primary" (click)="start()" mat-button>Start</button>
-              </div>
-              <div class="col mb-3">
-                <button mat-raised-button color="accent" (click)="stop()" mat-button>Stop</button>
-              </div>
-              <div class="col mb-3">
-                <button mat-raised-button (click)="reset()" mat-button>Reset</button>
-              </div>
-            </div>
-        </mat-card>
-      </div>
-      <div class="col-12 col-lg-8 mb-3">
-        <mat-card class="mb-3">
-          <mat-card-title>Requirements</mat-card-title>
-          <mat-card-content>
-            <p>Create a store with 2 variables in its state with naming up to your decision.</p>
-            <p>Initial state of them is -5 and 10 respectively.</p>
-            <div>
-              <p>The store should have 3 actions: "change", "increase" and "decrease":</p>
-              <ul>
-                <li>"change" action does nothing in a reducer.</li>
-                <li>"increase" action should increase the first variable by 1.</li>
-                <li>"decrease" action should decrease the second variable by 1.</li>
-              </ul>
-            </div>
-            <div>
-              <p>Create 2 components:</p>
-              <ul>
-                <li>The first component is responsible for displaying what it gets in an input property. It should display the input’s value always in a border. If its value is lower than 0 its border and value should be red, if greater then blue.</li>
-                <li>The second component renders the variables from store via the first component.</li>
-              </ul>
-            </div>
-           
-            <p>When we open the application for the first time we should see the numbers. The page should contain also a start button (implementation is up to you). Once it's pushed the application should start dispatching "change" actions every second. The action causes change in the store state of the 1st variable once and the 2nd variable twice.</p>
+          <p>When we open the application for the first time we should see the numbers. The page should contain also a
+            start button (implementation is up to you). Once it's pushed the application should start dispatching
+            "change" actions every second. The action causes change in the store state of the 1st variable once and the
+            2nd variable twice.</p>
 
-            <div class="additional-requirements">
-              <p>Please implement a stop button.</p>
-              <p>Please implement a reset button.</p>
-              <p>Don't use setTimeout / setInterval.</p>
-              <p>Cover the second component by unit tests.</p>
-            </div>
-          </mat-card-content>
-        </mat-card>
-        <mat-card>
-          <mat-card-title class="repository-information">Link to repository</mat-card-title>
-          <mat-card-content>
-            <a href="https://github.com/aliaksei-aziauchykau/AngularStreamTestTask">Repository</a>
-          </mat-card-content>
-        </mat-card>
-      </div>
+          <div class="additional-requirements">
+            <p>Please implement a stop button.</p>
+            <p>Please implement a reset button.</p>
+            <p>Don't use setTimeout / setInterval.</p>
+            <p>Cover the second component by unit tests.</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-title class="repository-information">Link to repository</mat-card-title>
+        <mat-card-content>
+          <a href="https://github.com/aliaksei-aziauchykau/AngularStreamTestTask">Repository</a>
+        </mat-card-content>
+      </mat-card>
+    </div>
   </div>
 </div>
