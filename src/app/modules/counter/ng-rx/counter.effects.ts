@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { tap, takeUntil, repeatWhen, switchMap, map, exhaustMap } from 'rxjs/operators';
-import { timer, pipe } from 'rxjs';
+import { takeUntil, switchMap, map, exhaustMap } from 'rxjs/operators';
+import { timer } from 'rxjs';
 import { increase, decrease, change } from "./counter.actions";
 
 @Injectable()
