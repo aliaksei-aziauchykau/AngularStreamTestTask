@@ -1,0 +1,41 @@
+@import "~src/styles/app.variables.less";
+
+.outer-counter {
+
+  &__value {
+    font-size: 20px;
+    font-weight: 400;
+    border: 1px solid grey;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    padding: 50% 0;
+    border-radius: 50%;
+    line-height: 0;
+
+    &--red-rounded {
+      border: 1px solid @red-color;
+      color: @red-color;
+    }
+
+    &--blue-rounded {
+      border: 1px solid @blue-color;
+      color: @blue-color;
+    }
+  }
+
+  &__value-container {
+      width: 45px;
+  }
+
+  &__component {
+    &--centered {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  
+  }
+}

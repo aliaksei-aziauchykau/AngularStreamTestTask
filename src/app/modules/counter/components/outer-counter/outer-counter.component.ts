@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class OuterCounterComponent implements OnInit {
   
-  @Input() value: Observable<number>;
+  @Input() value: number;
 
   constructor() { }
 

@@ -7,6 +7,7 @@ import { CounterEffects } from 'src/app/modules/counter/ng-rx/counter.effects';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     CommonModule,
+    MatCardModule,
     StoreModule.forFeature(counterFeatureKey, counterReducer),
     EffectsModule.forFeature([CounterEffects])
   ],

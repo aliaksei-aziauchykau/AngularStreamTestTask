@@ -1,2 +1,13 @@
-<p>outer-counter works!</p>
-<span>{{value | async }}</span>
+
+<div class="outer-counter text-center">
+  <mat-card>
+    <mat-card-content class="outer-counter__component--centered">
+      <div class="outer-counter__value-container">
+        <div class="outer-counter__value"
+          [ngClass]="{'outer-counter__value--red-rounded': value < 0, 'outer-counter__value--blue-rounded': value > 0}">
+          {{ value }}
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

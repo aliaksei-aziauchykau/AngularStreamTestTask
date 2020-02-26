@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { IApplicationState } from 'src/app/modules/common/ng-rx/state/application.state';
-import { start, stop } from 'src/app/modules/counter/ng-rx/counter.actions';
+import { start, stop, reset } from 'src/app/modules/counter/ng-rx/counter.actions';
 import { Observable } from 'rxjs';
 import { selectCounterFirstItem, selectCounterSecondItem } from 'src/app/modules/counter/ng-rx/counter.state';
 import { map } from 'rxjs/operators';
@@ -27,5 +27,9 @@ export class AppComponent {
 
   stop() {
     this.store.dispatch(stop());
+  }
+
+  reset() {
+    this.store.dispatch(reset());
   }
 }

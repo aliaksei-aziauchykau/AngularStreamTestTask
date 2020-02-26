@@ -1,5 +1,5 @@
 import { createReducer, on, Action } from '@ngrx/store';
-import { increase, decrease, change } from './counter.actions';
+import { increase, decrease, reset } from './counter.actions';
 import { ICounterState } from 'src/app/modules/counter/ng-rx/counter.state';
 
 const initialState: ICounterState = {
@@ -10,6 +10,7 @@ const initialState: ICounterState = {
 const _counterReducer = createReducer(initialState,
   on(increase, state => ({...state, firstItem: state.firstItem + 1 })),
   on(decrease, state => ({...state, secondItem: state.secondItem - 1 })),
+  on(reset, _ => ({...initialState})),
 );
 
 export function counterReducer(state: ICounterState, action: Action) {
