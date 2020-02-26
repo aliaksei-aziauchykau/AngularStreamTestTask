@@ -19,13 +19,13 @@ feel free to use any libraries.
 - [x] "decrease" action should decrease the second variable by 1.
 
 - [x] Create 2 components:
-- [ ] The first component is responsible for displaying what it gets in an input property. It should display the input’s value always in a border. If its value is lower than 0 its border and value should be red, if greater then blue.
-- [ ] The second component renders the variables from store via the first component.
+- [x] The first component is responsible for displaying what it gets in an input property. It should display the input’s value always in a border. If its value is lower than 0 its border and value should be red, if greater then blue.
+- [?] The second component renders the variables from store via the first component.
 
 - [x] When we open the application for the first time we should see the numbers. The page should contain also a start button (implementation is up to you). Once it's pushed the application should start dispatching "change" actions every second. The action causes change in the store state of the 1st variable once and the 2nd variable twice.
 
 - [x] Please implement a stop button.
-- [ ] Please implement a reset button.
+- [x] Please implement a reset button.
 
 - [x] Don't use setTimeout / setInterval.
 - [ ] Cover the second component by unit tests.

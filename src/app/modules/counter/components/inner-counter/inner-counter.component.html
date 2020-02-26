@@ -1,1 +1,13 @@
-<p>inner-counter works!</p>
+<mat-card class="counter text-center">
+    <mat-card-title class="mat-card__title mat-card__title--small">2nd Component</mat-card-title>
+  <mat-card-content class="counter__container counter__container--centered">
+    <div class="row">
+      <div class="col">
+        {{ firstItem$ | async }}
+      </div>
+      <div class="col">
+        {{ secondItem$ | async }}
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

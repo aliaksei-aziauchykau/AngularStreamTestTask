@@ -1,6 +1,11 @@
 @import "~src/styles/app.variables.less";
+@import "~src/styles/components/app.counter.less";
+@import "~src/styles/components/app.mat-card.less";
 
-.outer-counter {
+.counter {
+  &__value-container {
+    width: 45px;
+  }
 
   &__value {
     font-size: 20px;
@@ -23,19 +28,5 @@
       border: 1px solid @blue-color;
       color: @blue-color;
     }
-  }
-
-  &__value-container {
-      width: 45px;
-  }
-
-  &__component {
-    &--centered {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-  
   }
 }

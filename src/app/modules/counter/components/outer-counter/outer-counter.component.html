@@ -1,13 +1,24 @@
-
-<div class="outer-counter text-center">
-  <mat-card>
-    <mat-card-content class="outer-counter__component--centered">
-      <div class="outer-counter__value-container">
-        <div class="outer-counter__value"
-          [ngClass]="{'outer-counter__value--red-rounded': value < 0, 'outer-counter__value--blue-rounded': value > 0}">
-          {{ value }}
-        </div>
+<mat-card>
+  <mat-card-title class="mat-card__title mat-card__title--medium">1st Component</mat-card-title>
+  <mat-card-content>
+    <div class="row mb-3">
+      <div class="col">
+        <mat-card class="counter text-center">
+          <mat-card-content class="counter__container counter__container--centered">
+            <div class="counter__value-container">
+              <div class="counter__value"
+                [ngClass]="{'counter__value--red-rounded': value < 0, 'counter__value--blue-rounded': value > 0}">
+                {{ value }}
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
-    </mat-card-content>
-  </mat-card>
-</div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <app-inner-counter></app-inner-counter>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

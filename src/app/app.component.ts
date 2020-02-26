@@ -13,12 +13,12 @@ import { map } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'angular-stream';
-  value1$: Observable<number>;
-  value2$: Observable<number>;
+  firstItem$: Observable<number>;
+  secondItem$: Observable<number>;
 
   constructor(private readonly store: Store<IApplicationState>) {
-    this.value1$ = store.pipe(map(selectCounterFirstItem));
-    this.value2$ = store.pipe(map(selectCounterSecondItem));
+    this.firstItem$ = store.pipe(map(selectCounterFirstItem));
+    this.secondItem$ = store.pipe(map(selectCounterSecondItem));
   }
 
   start() {

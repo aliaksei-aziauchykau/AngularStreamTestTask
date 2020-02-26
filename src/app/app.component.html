@@ -2,16 +2,16 @@
 
 <div class="container">
   <div class="row mt-5">
-      <div class="col col-lg-4 mb-3">
+      <div class="col-12 col-lg-4 mb-3">
         <mat-card>
           <mat-card-content>
           <div class="row">
             <div class="col mb-3">
-              <app-outer-counter [value]="value1$ | async" [title]="'First Item to increas'">
+              <app-outer-counter [value]="firstItem$ | async" [title]="'First Item to increas'">
               </app-outer-counter>
             </div>
             <div class="col mb-3">
-              <app-outer-counter [value]="value2$ | async" [title]="'Second Item to decrease'">
+              <app-outer-counter [value]="secondItem$ | async" [title]="'Second Item to decrease'">
               </app-outer-counter>
             </div>
           </div>
@@ -30,7 +30,7 @@
             </div>
         </mat-card>
       </div>
-      <div class="col col-lg-8 mb-3">
+      <div class="col-12 col-lg-8 mb-3">
         <mat-card class="mb-3">
           <mat-card-title>Requirements</mat-card-title>
           <mat-card-content>
