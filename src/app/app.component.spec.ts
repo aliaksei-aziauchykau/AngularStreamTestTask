@@ -4,8 +4,6 @@ import { AppComponent } from './app.component';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { CounterModule } from 'src/app/modules/counter/counter.module';
-import { StoreModule } from '@ngrx/store';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 describe('AppComponent', () => {
@@ -42,11 +40,4 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app.title).toEqual('angular-stream');
   });
-
-  // it('should render title', () => {
-  //   const fixture = TestBed.createComponent(AppComponent);
-  //   fixture.detectChanges();
-  //   const compiled = fixture.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('angular-stream app is running!');
-  // });
 });

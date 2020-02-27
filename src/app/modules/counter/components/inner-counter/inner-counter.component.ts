@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { IApplicationState } from 'src/app/modules/common/ng-rx/state/application.state';
-import { selectCounterFirstItem, selectCounterSecondItem } from 'src/app/modules/counter/ng-rx/counter.state';
+import { CounterSelector } from 'src/app/modules/counter/ng-rx/counter.selectors';
 
 @Component({
   selector: 'app-inner-counter',
@@ -14,9 +11,9 @@ export class InnerCounterComponent implements OnInit {
   firstItem$: Observable<number>;
   secondItem$: Observable<number>;
 
-  constructor(private readonly store: Store<IApplicationState>) {
-    this.firstItem$ = store.pipe(map(selectCounterFirstItem));
-    this.secondItem$ = store.pipe(map(selectCounterSecondItem));
+  constructor(private readonly counterSelector: CounterSelector) {
+    this.firstItem$ = this.counterSelector.getFirstItem();
+    this.secondItem$ = this.counterSelector.getSecondItem();
   }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { counterReducer } from 'src/app/modules/counter/ng-rx/counter.reducer';
+import { counterReducer } from 'src/app/modules/counter/ng-rx/counter.reducers';
 import { OuterCounterComponent } from './components/outer-counter/outer-counter.component';
 import { InnerCounterComponent } from './components/inner-counter/inner-counter.component';
 import { counterFeatureKey } from 'src/app/modules/counter/ng-rx/counter.state';

@@ -1,10 +1,7 @@
+import { CounterActions } from 'src/app/modules/counter/ng-rx/counter.actions';
 import { Component } from '@angular/core';
-import { Store, select } from '@ngrx/store';
-import { IApplicationState } from 'src/app/modules/common/ng-rx/state/application.state';
-import { start, stop, reset } from 'src/app/modules/counter/ng-rx/counter.actions';
 import { Observable } from 'rxjs';
-import { selectCounterFirstItem, selectCounterSecondItem } from 'src/app/modules/counter/ng-rx/counter.state';
-import { map } from 'rxjs/operators';
+import { CounterSelector } from 'src/app/modules/counter/ng-rx/counter.selectors';
 
 @Component({
   selector: 'app-root',
@@ -16,20 +13,23 @@ export class AppComponent {
   firstItem$: Observable<number>;
   secondItem$: Observable<number>;
 
-  constructor(private readonly store: Store<IApplicationState>) {
-    this.firstItem$ = store.pipe(map(selectCounterFirstItem));
-    this.secondItem$ = store.pipe(map(selectCounterSecondItem));
+  constructor(
+    private readonly counterSelector: CounterSelector,
+    private readonly counterActions: CounterActions) {
+
+    this.firstItem$ = this.counterSelector.getFirstItem();
+    this.secondItem$ = this.counterSelector.getSecondItem();
   }
 
   start() {
-    this.store.dispatch(start());
+    this.counterActions.startCounters();
   }
 
   stop() {
-    this.store.dispatch(stop());
+    this.counterActions.stopCounters();
   }
 
   reset() {
-    this.store.dispatch(reset());
+    this.counterActions.resetCounterState();
   }
 }
